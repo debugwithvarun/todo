@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "../src/App.css"
 import Navbar from './components/Navbar'
-import Modal from './components/modal'
+import Modal from './components/Modal'
 import TodoCard from './components/TodoCard'
 const App = () => {
   const [showModal,setShowModal]=useState(false)
