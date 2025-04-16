@@ -4,6 +4,9 @@ import { useState } from 'react'
 import ModalEdit from './ModalEdit'
 const Card = ({ index, title, desc, setTodos,todos }) => {
   const [showModal, setShowModal] = useState(false)
+  const[currentTitle,SetCurrentTitle]=useState("")
+  const[CurrentDesc,SetCurrentDesc]=useState("")
+
   const handleCloseModal = () => {
     setShowModal(false)
   }
@@ -33,6 +36,7 @@ const Card = ({ index, title, desc, setTodos,todos }) => {
   }
 
   const handleEditEvent = () => {
+    
     const i = index
     const title = document.getElementById("todoTitle").value
     const desc = document.getElementById("tododesc").value
@@ -50,7 +54,7 @@ const Card = ({ index, title, desc, setTodos,todos }) => {
   }
   return (
     <div className="card">
-      {showModal && <ModalEdit onClose={handleCloseModal} addTodos={handleEditEvent} />}
+      {showModal && <ModalEdit onClose={handleCloseModal} addTodos={handleEditEvent} title={currentTitle} desc={CurrentDesc}/>}
       <div className="upperCard">
         <h2 className='title'>{title}</h2>
         <div className="check" onClick={handleCheckClick} id={`check-${index}`}></div>
@@ -61,7 +65,10 @@ const Card = ({ index, title, desc, setTodos,todos }) => {
       </div>
       <div className="specialsection">
         <div onClick={handleDeleteEvent} id={`delete-${index}`}>🚮</div>
-        <div onClick={() => { setShowModal(true) }} id={`edit-${index}`}>✏️</div>
+        <div onClick={() => { setShowModal(true) 
+          SetCurrentTitle(title)
+          SetCurrentDesc(desc)
+        }} id={`edit-${index}`}>✏️</div>
       </div>
     </div>
   )
