@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #BBE1FA;
+}
+
+body,
+.body {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  width: 100vw;
+  min-height: 100%;
+  background-color: #1B262C;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navBar {
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  background-color: #3282B8;
+  display: flex;
+  justify-content: left;
+  box-shadow: 0px 0px 10px #3282B8;
+  margin-bottom: 10px;
+}
+
+.navBar .logo {
+  height: 100%;
+  padding: 20px;
+  border-radius: 50%;
+  background-image: url("../src/assets/varun.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 10px #1B262C;
+  margin-right: 20px;
+}
+
+.navBar .logo:hover {
+  box-shadow: 0px 0px 10px #BBE1FA;
+}
+
+.btn {
+  background-color: #3282B8;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.btn2{
+  border-radius: 15px;
+  background-color: #1B262C;
+}
+.btnConatiner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+}
+
+.body .btn:hover {
+
+  box-shadow: 0px 0px 10px #BBE1FA;
+  background-color: #BBE1FA;
+  color: #1B262C;
+  transition: background-color 0.3s ease;
+}
