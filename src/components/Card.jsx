@@ -54,7 +54,7 @@ const Card = ({ index, title, desc, setTodos,todos }) => {
   }
   return (
     <div className="card">
-      {showModal && <ModalEdit onClose={handleCloseModal} addTodos={handleEditEvent} title={currentTitle} desc={CurrentDesc}/>}
+      {showModal && <ModalEdit onClose={handleCloseModal} addTodos={handleEditEvent} title={currentTitle} desc={CurrentDesc} SetCurrentTitle={SetCurrentTitle} SetCurrentDesc={SetCurrentDesc}/>}
       <div className="upperCard">
         <h2 className='title'>{title}</h2>
         <div className="check" onClick={handleCheckClick} id={`check-${index}`}></div>
